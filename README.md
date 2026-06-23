@@ -1,54 +1,112 @@
-# React + TypeScript + Vite
+# Flight Information Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта
 
-Currently, two official plugins are available:
+**Flight Information Dashboard** — это веб-приложение для отображения и анализа информации о рейсах авиакомпаний. Приложение предоставляет пользователям возможность просматривать расписание рейсов, статистику по пассажиропотоку и информацию об аэропортах в удобном интерактивном интерфейсе.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Приложение работает с данными о рейсах, включая маршруты (отправление/прибытие), информацию о воздушных судах, классы обслуживания, багажную информацию, цены и данные о бронировании.
 
-## Expanding the ESLint configuration
+## Технологии
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Проект построен на современном стеке технологий:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+| Технология          | Назначение                                                     |
+| ------------------- | -------------------------------------------------------------- |
+| **React 19**        | Фреймворк для построения пользовательского интерфейса          |
+| **TypeScript 6**    | Языковая типизация для повышения надёжности кода               |
+| **Vite 8**          | Сборщик проекта и инструмент разработки с поддержкой HMR       |
+| **Mantine UI 9**    | Библиотека компонентов React для создания красивого интерфейса |
+| **React Router v7** | Клиентская маршрутизация между страницами приложения           |
+| **Zustand**         | Лёгкое управление состоянием приложения                        |
+| **Phosphor Icons**  | Набор иконок для визуального оформления элементов UI           |
+
+## Возможности
+
+- 📋 Отображение расписания рейсов с детальной информацией о маршруте, времени вылета/прибытия, аэропортах
+- ✈️ Информация о воздушном судне (модель, производитель, регистрация)
+- 💰 Информация о стоимости билетов и классах обслуживания
+- 🧳 Багажная информация и правила провоза багажа
+- 👥 Список пассажиров рейса
+- 📊 Статистика по пассажиропотоку с визуальными графиками
+- 🔍 Поиск рейса по городу или номеру рейса
+- ⚠️ Фильтрация рейсов по checkbox «Задержанные и отмененные рейсы»
+- 🗺️ Навигация между разделами приложения
+
+## Структура проекта
+
+```
+src/
+├── App.tsx                    # Корневой компонент приложения
+├── Header.tsx                 # Шапка приложения с навигацией
+├── routes.tsx                 # Конфигурация маршрутов
+├── main.tsx                   # Точка входа в приложение
+├── components/                # Компоненты интерфейса
+│   ├── About.tsx              # Страница "О проекте"
+│   ├── BarsList.tsx           # Список рейсов с визуализацией
+│   ├── FlightInfo.tsx         # Информация о рейсе
+│   ├── PassengerChart.tsx     # График пассажиропотока
+│   ├── Statistic.tsx          # Статистика по рейсам
+│   └── FlightInfo/            # Подкомпоненты FlightInfo
+│       ├── AircraftInfo.tsx
+│       ├── AmenitiesList.tsx
+│       ├── BaggageInfo.tsx
+│       ├── BookingInfo.tsx
+│       ├── FlightHeader.tsx
+│       ├── PassengerList.tsx
+│       ├── PriceInfo.tsx
+│       ├── RouteInfo.tsx
+│       └── ScheduleInfo.tsx
+├── data/                      # Данные и трансформация
+│   ├── transformSchedule.ts   # Трансформация данных рейсов
+│   └── SheduleIn_2.json       # Исходные данные расписания
+├── services/                  # Сервисы (API)
+│   └── api.ts                 # API для получения данных о рейсах
+├── types/                     # TypeScript типы
+│   └── flight.ts              # Типизация данных о рейсах
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Установка и запуск
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Требования
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js 18+
+- npm или yarn
+
+### Установка зависимостей
+
+```bash
+npm install
 ```
+
+### Запуск в режиме разработки
+
+```bash
+npm run dev
+```
+
+Приложение будет доступно по адресу `http://localhost:5173` с поддержкой горячей перезагрузки (HMR).
+
+### Сборка для продакшена
+
+```bash
+npm run build
+```
+
+### Предпросмотр сборки
+
+```bash
+npm run preview
+```
+
+## Маршруты приложения
+
+| Путь         | Описание                               |
+| ------------ | -------------------------------------- |
+| `/`          | Главная страница — информация о рейсах |
+| `/schedule`  | Расписание рейсов                      |
+| `/statistic` | Статистика и графики пассажиропотока   |
+| `/about`     | Информация о проекте                   |
+
+## Лицензия
+
+Проект создан в учебных целях.
