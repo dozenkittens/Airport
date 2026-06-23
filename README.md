@@ -1,136 +1,54 @@
-# Aeroport — Информационная панель аэропорта Пулково
+# React + TypeScript + Vite
 
-## Описание проекта
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Веб-приложение «Аэропорт» представляет собой информационную панель для отображения данных о рейсах аэропорта Пулково (Санкт-Петербург). Приложение предоставляет пользователям возможность просматривать расписание вылетов, статистику по пассажиропотоку и информацию о проекте.
+Currently, two official plugins are available:
 
-Проект разработан с использованием современных веб-технологий: React 19, TypeScript, Mantine UI и Vite в качестве сборщика.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Назначение
+## Expanding the ESLint configuration
 
-Приложение предназначено для:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-- Отображения актуального расписания рейсов (онлайн-табло)
-- Визуализации статистики пассажиропотока по авиакомпаниям
-- Предоставления справочной информации о проекте и аэропорте
-
-## Технологический стек
-
-| Технология     | Версия | Назначение                                            |
-| -------------- | ------ | ----------------------------------------------------- |
-| React          | 19.1.0 | Фреймворк для построения пользовательского интерфейса |
-| TypeScript     | 5.8.3  | Статическая типизация кода                            |
-| Vite           | 6.3.5  | Сборщик проекта и сервер разработки                   |
-| Mantine UI     | 9.3.2  | Библиотека компонентов для создания современного UI   |
-| React Router   | 7.18.0 | Клиентская маршрутизация                              |
-| Phosphor Icons | 2.1.10 | Набор иконок для интерфейса                           |
-| Tabler Icons   | 3.44.0 | Дополнительные иконки                                 |
-
-## Архитектура приложения
-
-### Структура проекта
-
-```
-src/
-├── main.tsx              # Точка входа в приложение
-├── App.tsx               # Корневой компонент с провайдерами
-├── routes.tsx            # Конфигурация маршрутов
-├── index.css             # Глобальные стили
-├── components/           # Компоненты пользовательского интерфейса
-│   ├── Header.tsx        # Навигационная панель
-│   ├── FlightInfo.tsx    # Страница онлайн-табло рейсов
-│   ├── FlightHeader.tsx  # Карточка отдельного рейса
-│   ├── PassangerChart.tsx# Графики статистики пассажиропотока
-│   └── About.tsx         # Страница о проекте
-├── data/                 # Данные и трансформации
-│   ├── SheduleIn_2.json  # Исходные данные о рейсах
-│   └── transformSchedule.ts # Функция трансформации данных
-└── types/                # TypeScript-типы
-    └── flight.ts         # Интерфейсы для данных о рейсах
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-### Маршруты приложения
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-| Путь         | Компонент       | Описание                                    |
-| ------------ | --------------- | ------------------------------------------- |
-| `/`          | FlightInfo      | Главная страница — список всех рейсов       |
-| `/schedule`  | FlightInfo      | Онлайн-табло вылетов (дублирует главную)    |
-| `/statistic` | PassangerCharts | Статистика пассажиропотока по авиакомпаниям |
-| `/about`     | About           | Информация о проекте                        |
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### Компоненты
-
-**Header** — навигационная панель в верхней части страницы с логотипом «Аэропорт Пулково» и тремя пунктами меню: «Онлайн табло», «Статистика», «О проекте». Активное состояние пункта меню определяется через локальное состояние `useState`.
-
-**FlightInfo** — основная страница приложения, отображающая список рейсов. Содержит поле поиска для фильтрации рейсов по названию города или номеру рейса. Каждый рейс отображается в виде карточки с информацией о времени вылета/прилёта, статусе и шлюзе.
-
-**FlightHeader** — компонент карточки отдельного рейса. Отображает время вылета и прилёта, номер рейса, авиакомпанию, а также цветной индикатор статуса (красный для отменённых рейсов).
-
-**PassangerCharts** — страница статистики с двумя графиками:
-
-- Столбчатая диаграмма сравнения вместимости и количества забронированных мест по каждому рейсу
-- Список столбцов с распределением пассажиров по авиакомпаниям
-
-**About** — информационная страница о проекте.
-
-## Данные
-
-### Структура данных
-
-Исходные данные хранятся в формате JSON (`SheduleIn_2.json`) и содержат массив объектов рейсов со следующей структурой:
-
-- **flightNumber** — номер рейса
-- **airline** — информация об авиакомпании (название, код)
-- **route** — маршрут (город отправления, город прибытия, расстояние)
-- **schedule** — расписание (время вылета, прилёта, длительность)
-- **status** — статус рейса (Scheduled, Canceled и др.)
-- **booking** — информация о бронировании (вместимость, количество забронированных мест)
-
-### Трансформация данных
-
-Функция `transformSchedule.ts` преобразует исходные данные для отображения в реальном времени:
-
-- Время вылета генерируется как случайное значение от 60 до 180 минут назад (для рейсов, которые уже выполнили вылет)
-- Время прилёта — от -30 до +60 минут относительно текущего момента
-
-## Особенности реализации
-
-### Стилизация
-
-- Все компоненты используют Mantine UI с применением компонентов `Card`, `Stack`, `Group`, `Badge` и других
-- Кастомные фоны и границы задаются через inline-стили
-- CSS-модули не используются — стили либо inline, либо глобальные
-
-### Локализация
-
-- Все даты форматируются с использованием русской локали (`ru-RU`)
-- Весь пользовательский интерфейс выполнен на русском языке
-
-### Типизация
-
-- Проект использует строгий режим TypeScript (strict mode)
-- Включены опции `verbatimModuleSyntax`, `erasableSyntaxOnly`
-- Отсутствуют неиспользуемые локальные переменные и параметры функций
-
-## Установка и запуск
-
-```bash
-# Установка зависимостей
-npm install
-
-# Запуск сервера разработки
-npm run dev
-
-# Сборка проекта для продакшена
-npm run build
-
-# Предпросмотр сборки
-npm run preview
-
-# Проверка кода линтером
-npm run lint
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
 ```
-
-## Заключение
-
-Проект «Аэропорт» демонстрирует применение современных веб-технологий для создания интерактивного информационного интерфейса. Использование React 19 обеспечивает эффективную работу с пользовательским интерфейсом, TypeScript добавляет надёжность за счёт статической типизации, а библиотека Mantine UI позволяет быстро создавать красивые и функциональные компоненты.
