@@ -1,0 +1,756 @@
+{
+    "data": [
+        {
+            "flightNumber": "5N-581",
+            "airline": {
+                "name": "Smartavia",
+                "code": "5N",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {                                       
+                    "code": "ARH",
+                    "name": "Talagi Airport",
+                    "city": "Arkhangelsk",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "740 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T10:15:00.000Z",
+                "arrival": "2026-06-20T11:45:00.000Z",
+                "arrival_fact": "2026-06-20T11:45:00.000Z",
+                "duration": "1h 30m",
+                "timezone": "UTC+3"
+            },
+            "aircraft": {
+                "model": "Boeing 737-800",
+                "manufacturer": "Boeing",
+                "registration": "RA-73655"
+            },
+            "status": "Canceled",
+            "gate": "A04",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 3100,
+                "taxes": 650,
+                "total": 3750,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 24,
+                "booked": 165,
+                "capacity": 189,
+                "occupancyRate": "87%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Andrey Semenov",
+                    "seat": "14B",
+                    "class": "Economy"
+                },
+                {
+                    "name": "Marina Polyakova",
+                    "seat": "14C",
+                    "class": "Economy"
+                },
+                {
+                    "name": "Oleg Sorokin",
+                    "seat": "20A",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": [
+                "Smart Upgrades available",
+                "Standard legroom",
+                "Paid meals",
+                "Carry-on included"
+            ]
+        },
+        {
+            "flightNumber": "SU-1025",
+            "airline": {
+                "name": "Aeroflot",
+                "code": "SU",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "KGD",
+                    "name": "Khrabrovo Airport",
+                    "city": "Kaliningrad",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "830 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T08:00:00.000Z",
+                "arrival": "2026-06-20T10:40:00.000Z",
+                "duration": "1h 40m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T10:40:00.000Z"
+            },
+            "aircraft": {
+                "model": "Airbus A321neo",
+                "manufacturer": "Airbus",
+                "registration": "RA-73752"
+            },
+            "status": "Scheduled",
+            "gate": "05",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 4200,
+                "taxes": 800,
+                "total": 5000,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 40,
+                "booked": 156,
+                "capacity": 196,
+                "occupancyRate": "80%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Roman Voronov",
+                    "seat": "10A",
+                    "class": "Economy"
+                },
+                {
+                    "name": "Yulia Romanova",
+                    "seat": "10B",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": [
+                "Snack and drinks",
+                "Standard legroom",
+                "In-flight entertainment"
+            ]
+        },
+        {
+            "flightNumber": "S7-3022",
+            "airline": {
+                "name": "S7 Airlines",
+                "code": "S7",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "SVX",
+                    "name": "Koltsovo International Airport",
+                    "city": "Yekaterinburg",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1790 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T04:20:00.000Z",
+                "arrival": "2026-06-20T07:15:00.000Z",
+                "duration": "2h 55m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T07:15:00.000Z"
+            },
+            "aircraft": {
+                "model": "Airbus A320neo",
+                "manufacturer": "Airbus",
+                "registration": "RA-73441"
+            },
+            "status": "Scheduled",
+            "gate": "10",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 6800,
+                "taxes": 1100,
+                "total": 7900,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 12,
+                "booked": 152,
+                "capacity": 164,
+                "occupancyRate": "92%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Kirill Zhukov",
+                    "seat": "18C",
+                    "class": "Economy"
+                },
+                {
+                    "name": "Daria Zhukova",
+                    "seat": "18D",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Hot sandwich and drinks", "S7 Boost options"]
+        },
+        {
+            "flightNumber": "DP-211",
+            "airline": {
+                "name": "Pobeda",
+                "code": "DP",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "KUF",
+                    "name": "Kurumoch International Airport",
+                    "city": "Samara",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1420 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T19:30:00.000Z",
+                "arrival": "2026-06-20T21:50:00.000Z",
+                "duration": "2h 20m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T21:50:00.000Z"
+            },
+            "aircraft": {
+                "model": "Boeing 737-800",
+                "manufacturer": "Boeing",
+                "registration": "RA-73601"
+            },
+            "status": "Scheduled",
+            "gate": "B02",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 4100,
+                "taxes": 750,
+                "total": 4850,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 8,
+                "booked": 181,
+                "capacity": 189,
+                "occupancyRate": "95%"
+            },
+            "baggage": {
+                "carry": "1 x 4.5kg",
+                "checked": "0 x 0kg",
+                "total": "4.5kg"
+            },
+            "passengers": [
+                {
+                    "name": "Pavel Gusev",
+                    "seat": "30A",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Strict baggage control", "Water upon request"]
+        },
+        {
+            "flightNumber": "5N-542",
+            "airline": {
+                "name": "Smartavia",
+                "code": "5N",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "KZN",
+                    "name": "Kazan International Airport",
+                    "city": "Kazan",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1200 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T15:10:00.000Z",
+                "arrival": "2026-06-20T17:25:00.000Z",
+                "duration": "2h 15m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T17:25:00.000Z"
+            },
+            "aircraft": {
+                "model": "Airbus A320-200",
+                "manufacturer": "Airbus",
+                "registration": "RA-73690"
+            },
+            "status": "Scheduled",
+            "gate": "A11",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 3500,
+                "taxes": 680,
+                "total": 4180,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 19,
+                "booked": 161,
+                "capacity": 180,
+                "occupancyRate": "89%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Alina Khakimova",
+                    "seat": "12F",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Paid seat selection", "In-flight shop"]
+        },
+        {
+            "flightNumber": "SU-2841",
+            "airline": {
+                "name": "Aeroflot",
+                "code": "SU",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "VVO",
+                    "name": "Vladivostok International Airport",
+                    "city": "Vladivostok",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "6540 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T11:00:00.000Z",
+                "arrival": "2026-06-20T19:40:00.000Z",
+                "duration": "8h 40m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T19:40:00.000Z"
+            },
+            "aircraft": {
+                "model": "Boeing 777-300ER",
+                "manufacturer": "Boeing",
+                "registration": "RA-73140"
+            },
+            "status": "Scheduled",
+            "gate": "02",
+            "terminal": "1",
+            "class": "Business",
+            "price": {
+                "base": 65000,
+                "taxes": 4500,
+                "total": 69500,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 4,
+                "booked": 26,
+                "capacity": 30,
+                "occupancyRate": "86%"
+            },
+            "baggage": {
+                "carry": "2 x 15kg",
+                "checked": "2 x 32kg",
+                "total": "94kg"
+            },
+            "passengers": [
+                {
+                    "name": "Ilya Bogdanov",
+                    "seat": "03D",
+                    "class": "Business"
+                }
+            ],
+            "amenities": [
+                "Full course hot meals",
+                "Lie-flat seats",
+                "Lounge access",
+                "Amenity kit"
+            ]
+        },
+        {
+            "flightNumber": "S7-2165",
+            "airline": {
+                "name": "S7 Airlines",
+                "code": "S7",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "OMS",
+                    "name": "Omsk Tsentralny Airport",
+                    "city": "Omsk",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "2580 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T06:10:00.000Z",
+                "arrival": "2026-06-20T09:50:00.000Z",
+                "duration": "3h 40m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T09:50:00.000Z"
+            },
+            "aircraft": {
+                "model": "Embraer 170",
+                "manufacturer": "Embraer",
+                "registration": "RA-02855"
+            },
+            "status": "Scheduled",
+            "gate": "09",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 8200,
+                "taxes": 1250,
+                "total": 9450,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 5,
+                "booked": 73,
+                "capacity": 78,
+                "occupancyRate": "93%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Valery Isaev",
+                    "seat": "08A",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Beverages and snack", "Standard legroom"]
+        },
+        {
+            "flightNumber": "DP-344",
+            "airline": {
+                "name": "Pobeda",
+                "code": "DP",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "PEE",
+                    "name": "Perm International Airport",
+                    "city": "Perm",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1500 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T22:00:00.000Z",
+                "arrival": "2026-06-21T00:15:00.000Z",
+                "duration": "2h 15m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-21T00:15:00.000Z"
+            },
+            "aircraft": {
+                "model": "Boeing 737-800",
+                "manufacturer": "Boeing",
+                "registration": "RA-73608"
+            },
+            "status": "Canceled",
+            "gate": "B05",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 3900,
+                "taxes": 700,
+                "total": 4600,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 14,
+                "booked": 175,
+                "capacity": 189,
+                "occupancyRate": "92%"
+            },
+            "baggage": {
+                "carry": "1 x 4.5kg",
+                "checked": "0 x 0kg",
+                "total": "4.5kg"
+            },
+            "passengers": [
+                {
+                    "name": "Svyatoslav Volkov",
+                    "seat": "05B",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Strict cabin bag size", "No seat recline"]
+        },
+        {
+            "flightNumber": "5N-521",
+            "airline": {
+                "name": "Smartavia",
+                "code": "5N",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "MMK",
+                    "name": "Murmansk Airport",
+                    "city": "Murmansk",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1010 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T13:40:00.000Z",
+                "arrival": "2026-06-20T15:30:00.000Z",
+                "duration": "1h 50m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T15:30:00.000Z"
+            },
+            "aircraft": {
+                "model": "Boeing 737-700",
+                "manufacturer": "Boeing",
+                "registration": "RA-73644"
+            },
+            "status": "Scheduled",
+            "gate": "A08",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 3400,
+                "taxes": 660,
+                "total": 4060,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 32,
+                "booked": 116,
+                "capacity": 148,
+                "occupancyRate": "78%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Fedor Safonov",
+                    "seat": "11E",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Pre-ordered meal options", "Standard legroom"]
+        },
+        {
+            "flightNumber": "SU-2953",
+            "airline": {
+                "name": "Aeroflot",
+                "code": "SU",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "KRR",
+                    "name": "Krasnodar International Airport",
+                    "city": "Krasnodar",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "1760 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T16:20:00.000Z",
+                "arrival": "2026-06-20T19:30:00.000Z",
+                "duration": "3h 10m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T19:30:00.000Z"
+            },
+            "aircraft": {
+                "model": "Airbus A320neo",
+                "manufacturer": "Airbus",
+                "registration": "RA-73733"
+            },
+            "status": "Scheduled",
+            "gate": "06",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 5900,
+                "taxes": 950,
+                "total": 6850,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 21,
+                "booked": 135,
+                "capacity": 156,
+                "occupancyRate": "86%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Vasilisa Belova",
+                    "seat": "16F",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": [
+                "Hot snack and drinks",
+                "In-flight Wi-Fi entertainment"
+            ]
+        },
+        {
+            "flightNumber": "S7-1028",
+            "airline": {
+                "name": "S7 Airlines",
+                "code": "S7",
+                "region": "Russia"
+            },
+            "route": {
+                "origin": {
+                    "code": "DME",
+                    "name": "Domodedovo International Airport",
+                    "city": "Moscow",
+                    "country": "Russia"
+                },
+                "destination": {
+                    "code": "LED",
+                    "name": "Pulkovo Airport",
+                    "city": "Saint Petersburg",
+                    "country": "Russia"
+                },
+                "distance": "690 km",
+                "type": "Domestic"
+            },
+            "schedule": {
+                "departure": "2026-06-20T21:00:00.000Z",
+                "arrival": "2026-06-20T22:35:00.000Z",
+                "duration": "1h 35m",
+                "timezone": "UTC+3",
+                "arrival_fact": "2026-06-20T22:35:00.000Z"
+            },
+            "aircraft": {
+                "model": "Airbus A320neo",
+                "manufacturer": "Airbus",
+                "registration": "RA-73415"
+            },
+            "status": "Scheduled",
+            "gate": "11",
+            "terminal": "1",
+            "class": "Economy",
+            "price": {
+                "base": 4300,
+                "taxes": 820,
+                "total": 5120,
+                "currency": "RUB"
+            },
+            "booking": {
+                "available": 18,
+                "booked": 146,
+                "capacity": 164,
+                "occupancyRate": "89%"
+            },
+            "baggage": {
+                "carry": "1 x 10kg",
+                "checked": "1 x 23kg",
+                "total": "33kg"
+            },
+            "passengers": [
+                {
+                    "name": "Konstantin Isaev",
+                    "seat": "22E",
+                    "class": "Economy"
+                }
+            ],
+            "amenities": ["Catering and drinks", "Standard legroom"]
+        }
+    ]
+}
